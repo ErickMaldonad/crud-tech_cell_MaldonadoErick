@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Product - PhoneMart</title>
+  <!-- Incluir Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container mt-4">
+  <h1 class="text-center">Edit Product</h1>
+  <form action="/edit/<%= product.id %>" method="post">
+    <div class="form-group">
+      <label for="brand">Brand:</label>
+      <input type="text" class="form-control" name="brand" value="<%= product.brand %>" required>
+    </div>
+    <div class="form-group">
+      <label for="model">Model:</label>
+      <input type="text" class="form-control" name="model" value="<%= product.model %>" required>
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" class="form-control" name="price" value="<%= product.price %>" step="0.01" required>
+    </div>
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input type="number" class="form-control" name="quantity" value="<%= product.quantity %>" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Product</button>
+  </form>
+  <a href="/" class="btn btn-secondary mt-2">Back to Product List</a>
+  <!-- Incluir Bootstrap JS y jQuery (opcional, dependiendo de las funcionalidades que utilices) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
